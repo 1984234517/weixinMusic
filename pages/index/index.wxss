@@ -1,0 +1,103 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.header_view_hide{
+  display: none;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+}
+.header_view_show{
+  display: block;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+}
+
+.player{
+  display: flex;
+  align-items: center;
+  background: #222;
+  border-top: 1px solid #252525;
+  height: 112rpx;
+}
+.player-cover{
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 15rpx;
+  border-radius: 8rpx;
+  border:1px solid #333;
+}
+.player-info{
+  flex:1;
+  font-size: 10pt;
+  line-height: 38rpx;
+  margin-left: 20rpx;
+  padding-bottom: 8rpx;
+
+}
+.player-info-singer{
+  color: #888;
+
+}
+.player-controls image{
+  width:80rpx;
+  height: 80rpx;
+  margin-right: 15rpx;
+}
+.content-play{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+}
+.content-play-info>view{
+  color: #888;
+  font-size: 11pt;
+}
+.content-play-cover image{
+  animation:rotateImage 10s linear infinite;
+  width: 400rpx;
+  height: 400rpx;
+  border-radius: 50%;
+  border: 1px solid #333;
+}
+@keyframes rotateImage{
+  from {
+    transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(360deg);
+  }
+}
+.content-play-progress{
+  display: flex;
+  align-items: center;
+  margin:0 35rpx;
+  font-size:9pt;
+  text-align: center;
+}
+.content-play-progress>view{
+  flex:1;
+}
+

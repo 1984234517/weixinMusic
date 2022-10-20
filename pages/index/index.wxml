@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<view class="{{showView?'header_view_show':'header_view_hide'}}">
+<!--显示音乐信息-->
+<view class="content-play-info">
+  <text>{{play.title}}</text>
+  <view>——{{play.singer}}——</view>
+</view>
+<!--显示专辑封面-->
+<view class="content-play-cover">
+  <image src="{{play.coverImgUrl}}" style="animation-play-state:{{state}}"/>
+</view>
+<!--显示播放进度和时间-->
+<view class="content-play-progress">
+  <text>{{play.currentTime}}</text>
+  <view>
+    <slider bindchange="sliderChange" activeColor="#d33a31" block-size="12" value="{{play.percent}}" />
+  </view>
+  <text>{{play.duration}}</text>
+</view>
+</view>
+<view class="player">
+  <image class="player-cover" src="{{play.coverImgUrl}}" />
+  <view class="player-info">
+    <view class="player-info-title">{{play.title}}</view>
+    <view class="player-info-singer">{{play.singer}}</view>
+  </view>
+  <view class="player-controls">
+    <!--切换到播放列表-->
+    <image src="../images/playlist.png" bindtap="changePage" data-page="2" />
+    <!--播放-->
+    <image wx:if="{{state=='paused'}}" src="../images/run.png" bindtap="play" size="minsize"/>
+    <image wx:else src="../images/pause.png" bindtap="pause" size="minsize"/>
+     <!--下一曲-->
+     <image src="../images/pre.png" bindtap="pre"/>
+     <image src="../images/next.png" bindtap="next"/>
+</view>
+</view>
